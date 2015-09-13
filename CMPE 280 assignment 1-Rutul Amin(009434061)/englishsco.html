@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+#d4{
+float: right;
+margin-right: 100px;
+text-align: left;
+border: 2px solid;
+padding: 5px;
+width: 300px;
+border-radius: 20px;
+}
+
+#d2{
+	float: right;
+	margin-right: 200px;
+}
+
+fieldset {
+	float: right;
+	margin-right: 100px;
+    border: 5px solid #a1a1a1;
+    padding: 10px 40px; 
+    width: 1000px;
+    border-radius: 25px;
+}
+
+</style>
+
+<script type="text/javascript">
+    
+    function handleSubmit()
+    {
+        var quantitative = window.location.search.substring(1);
+ //alert(answer[1]);
+ var radios = document.getElementsByName('colors');
+ var radios1 = document.getElementsByName('colors1');
+ //alert(radios.length);
+  var value;
+  var value1;
+  var answer=0;
+  var flag1=0;
+  var flag2=0;
+  var flag=0;
+  var j=0;
+  for (var i = 0; i < radios.length; i++) {
+      if (radios[i].type === 'radio' && radios[i].checked) {
+        
+        flag1 = 1;
+        //value = radios[i].value;  
+        value = document.getElementById("hid"+i).value;     
+      //  j = Number(j)+1;
+    }
+}
+var temp;
+for (var i = 0; i < radios1.length; i++) {
+      if (radios1[i].type === 'radio' && radios1[i].checked) {
+        
+        flag2=1;
+        //value = radios[i].value;  
+        temp = Number(i) + 3;
+        value1 = document.getElementById("hid"+i).value;     
+       // j = Number(j)+1;
+    }
+}
+
+if(flag1==1 && flag2==1)
+  flag = 1;
+//alert(value.toString());
+if(value === "true" && value1 === "true")
+  answer=1;
+
+
+  window.location.href = "embed_video.html?"+quantitative+"&e="+answer+"/"+flag;
+    }
+
+</script>
+
+</head>
+
+<body>
+
+<fieldset>
+<legend> Question 3 </legend>
+
+<p>As per the latest Twitter news, complete the article snippet given by appropriate choices for the blanks</p>
+
+<div id="d4">
+Twitter wants more cash. The company announced two <mark id="demo">_____</mark> million debt offerings in filling today, each with a potential $100 increase provided that  the sales are oversubscribed. Assuming the full tip including the $100 million boosters, <mark id="pres">_____</mark> will raise up to $1.5 billion with the two offerings.
+</div>
+
+<form class="f1">
+<div class="d1">
+<input type="radio" name="colors" value="$650" id="myRadio1" onclick="myFunction()"> <data name="answer" value = "true" id="hid0" />Option 1 Mark 1: $650
+</br>
+<input type="radio" name="colors" value="$550" id="myRadio2" onclick="myFunction()"><data name="answer" value = "false" id="hid1" />Option 1 Mark 1: $550
+</br>
+<input type="radio" name="colors" value="$750" id="myRadio3" onclick="myFunction()"><data name="answer" value = "false" id="hid2" />Option 1 Mark 1: $750
+</br>
+</div>
+
+</br>
+
+<div class="d2">
+<input type="radio" name="colors1" value="Twitter" id="myRadio4" onclick="myFunct()"><data name="answer" value = "true" id="hid3" />Option 1 Mark 2: Twitter
+</br>
+<input type="radio" name="colors1" value="Google" id="myRadio5" onclick="myFunct()"><data name="answer" value = "false" id="hid4" />Option 1 Mark 2: Google
+</br>
+<input type="radio" name="colors1" value="Facebook" id="myRadio6" onclick="myFunct()"><data name="answer" value = "false" id="hid5" />Option 1 Mark 2: Facebook
+</br>
+</div>
+<input type="button" value="Submit & New Question" onClick="handleSubmit()" />
+<input type="reset" value="Cancel & Clear Selection" />
+</form>
+
+
+</br>
+
+
+
+<p id="demo"></p>
+</fieldset>
+
+<script>
+function myFunction() {
+  if (document.getElementById("myRadio1").checked){
+    var x = document.getElementById("myRadio1").value;
+    document.getElementById("demo").innerHTML = x;
+}else if(document.getElementById("myRadio2").checked){
+  var x = document.getElementById("myRadio2").value;
+    document.getElementById("demo").innerHTML = x;
+}else if(document.getElementById("myRadio3").checked){
+  var x = document.getElementById("myRadio3").value;
+    document.getElementById("demo").innerHTML = x;
+}
+}
+
+function myFunct() {
+    if (document.getElementById("myRadio4").checked){
+    var x = document.getElementById("myRadio4").value;
+    document.getElementById("pres").innerHTML = x;
+}else if(document.getElementById("myRadio5").checked){
+  var x = document.getElementById("myRadio5").value;
+    document.getElementById("pres").innerHTML = x;
+}else if(document.getElementById("myRadio6").checked){
+  var x = document.getElementById("myRadio6").value;
+    document.getElementById("pres").innerHTML = x;
+}
+}
+
+</script>
+
+
+
+</body>
+</html>

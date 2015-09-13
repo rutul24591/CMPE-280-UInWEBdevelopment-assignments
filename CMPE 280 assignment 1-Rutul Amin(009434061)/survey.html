@@ -1,0 +1,62 @@
+<!doctype html>
+  <html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Survey</title>
+
+  <script type="text/javascript">
+  function handleSubmit(){
+  	//alert(window.location.search.substring(1));
+  	window.location.href = "score.html?"+window.location.search.substring(1);
+  }
+  </script>
+
+  <style>
+
+  form{
+  		text-align: center;
+  	  border: 5px solid #a1a1a1;
+      padding: 10px 40px; 
+      width: 1000px;
+      border-radius: 25px;
+  }
+
+  </style>
+
+  </head>
+  <body>
+		<form id="f1" action="score.html">
+
+		<h3>Survey</h3>	
+		<p> How did you like the center?</p>
+
+		<label id="l1" name="l1">Comments</label>
+		&nbsp;
+		<textarea id="ta1" name="ta1"> </textarea>
+		<div>
+		<p>Select text area Location</p>
+		<label id="l2" name="l2">City</label>
+		&nbsp;
+		<select>
+			<option value="San Jose">San Jose</option>
+			<option value="San Fransisco">San Fransisco</option>
+			<option value="Mountain View">Mountain View</option>
+			<option value="Palo Alto">Palo Alto</option>
+		</select>
+		</div>
+		</br>
+		<div>
+			<label id="l3" name="l3">Room no.</label>
+		&nbsp;
+		<select>
+			<option value="337">Room 337</option>
+			<option value="210">Room 210</option>
+			<option value="922">Room 922</option>
+			<option value="10">Room 10</option>
+		</select>
+		</div>
+		</br>
+	<input type="button" value="Submit and Get Score" onClick="handleSubmit()"/>
+</form>
+  </body>
+  </html>

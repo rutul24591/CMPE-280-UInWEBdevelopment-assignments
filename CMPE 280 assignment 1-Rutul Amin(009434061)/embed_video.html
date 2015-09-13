@@ -1,0 +1,91 @@
+<!doctype html>
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Video Page</title>
+  <style type="text/css">
+
+  fieldset{
+      border: 5px solid #a1a1a1;
+      padding: 10px 40px; 
+      width: 1000px;
+      border-radius: 25px;
+  }
+
+  aside{
+    float: right;
+    margin-right: 50px;
+  }
+
+  </style>
+
+  <script type="text/javascript">
+  function handleSubmit()
+  {
+    
+  var quantitative_English = window.location.search.substring(1);
+ //alert(answer[1]);
+  var radios = document.getElementsByName('line');
+  var value;
+  var answer=0;
+  var flag=0;
+  for (var i = 0; i < radios.length; i++) {
+      if (radios[i].type === 'radio' && radios[i].checked) {
+        flag=1;
+        value = document.getElementById("hid"+i).value;;       
+    }
+}
+if(value === "true")
+  answer=1;
+  window.location.href = "survey.html?"+quantitative_English+"&v="+answer+"/"+flag;
+  }
+
+  </script>
+
+  </head>
+  <body>
+  <div id="d2">
+    <section>
+      <form id="f2" name="f2" action="/survey.html">
+        
+        <fieldset>
+                <h1>Watch the video and answer the following question.</h1>
+                <p>What is the source as mentioned in the video?</p>
+
+                <aside>
+  <!--  <video width="400"> -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ih9jPaZct1w" frameborder="0" allowfullscreen>
+        
+      </iframe>
+  <!--    </video> -->
+      <p>Expedition 40 Undocks Ending Mission </p>
+       
+    </aside>
+            <br>
+      <br>
+      <input type="radio" name="line" value="option1"><data name="answer" value = "true" id="hid0" />
+      NASA.gov</input>
+      &nbsp;
+      <input type="radio" name="line" value="option2"><data name="answer" value = "true" id="hid1" />
+      Data.gov</input>
+      <br>
+      <br>
+      <input type="radio" name="line" value="option3"><data name="answer" value = "true" id="hid2" />
+      Facebook</input>
+      &nbsp;
+      &nbsp;
+      <input type="radio" name="line" value="option4"><data name="answer" value = "true" id="hid3" />
+      XYZ.net</input>
+      <br>
+    <br>
+
+    <input type="button" value="Submit now" onClick="handleSubmit()" />
+
+    </form>
+  </section>
+ </div>
+    </fieldset>
+
+  </body>
+  </html>
+

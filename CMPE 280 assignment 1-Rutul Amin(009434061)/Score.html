@@ -1,0 +1,92 @@
+<!doctype html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Score</title>
+
+  <script type="text/javascript">
+      window.onload=function()
+      {
+            var answer = window.location.search.substring(1);
+            answer = answer.split("&");
+            //alert(q_answer.toString());
+            var q_answer = answer[0].split("=");
+            q_answer = q_answer[1].split("/");
+            var e_answer = answer[1].split("=");
+            e_answer = e_answer[1].split("/");
+            var v_answer = answer[2].split("=");
+            v_answer = v_answer[1].split("/");
+
+            var txt = document.getElementById("q_question").innerHTML;
+            document.getElementById("q_question").innerHTML  = txt + q_answer[1];
+
+            var txt = document.getElementById("q_correct_answer").innerHTML;
+            document.getElementById("q_correct_answer").innerHTML  = txt + q_answer[0];
+
+            txt =  document.getElementById("q_score").innerHTML;
+            document.getElementById("q_score").innerHTML  = txt + q_answer[0];
+
+            var txt = document.getElementById("e_question").innerHTML;
+            document.getElementById("e_question").innerHTML  = txt + e_answer[1];
+
+            txt = document.getElementById("e_correct_answer").innerHTML;
+            document.getElementById("e_correct_answer").innerHTML  = txt + e_answer[0];
+
+            txt =  document.getElementById("e_score").innerHTML;
+            document.getElementById("e_score").innerHTML  = txt + e_answer[0];
+
+            var txt = document.getElementById("v_question").innerHTML;
+            document.getElementById("v_question").innerHTML  = txt + v_answer[1];
+
+            txt = document.getElementById("v_correct_answer").innerHTML;
+            document.getElementById("v_correct_answer").innerHTML  = txt + v_answer[0];
+
+            txt =  document.getElementById("v_score").innerHTML;
+            document.getElementById("v_score").innerHTML  = txt + v_answer[0];
+      }
+  </script>
+  <style type="text/css">
+  body{
+    text-align: left;
+    border: 5px solid #a1a1a1;
+      padding: 10px 40px; 
+      width: 1000px;
+      border-radius: 25px;
+  }
+  </style>
+  </head>
+  <body>
+  	<h1>Score Card</h1>
+  	<details>
+  		<summary>
+  			Quantitative Section
+  		</summary>
+  		<p id="q_question">Number of Questions answered : </p>
+     
+  		<p id="q_correct_answer">Number of Correct Answers:  </p>
+     
+  		<p id="q_score">Score: </p>
+      
+  	</details>
+
+  	<details>
+  		<summary>
+  			Reading Section
+  		</summary>
+  		<p id="e_question">Number of Questions answered : </p>
+  		<p id="e_correct_answer">Number of Correct Answers: </p>
+  		<p id="e_score">Score: </p>
+  	</details>
+
+  	<details>
+  		<summary>
+  			Audio/Video Section
+  		</summary>
+  		<p id="v_question">Number of Questions answered : </p>
+  		<p id="v_correct_answer">Number of Correct Answers: </p>
+  		<p id="v_score">Score: </p>
+  	</details>
+
+<p>Thank You </p>
+<input type="button" value="Finish"></input>
+  </body>
+  </html>

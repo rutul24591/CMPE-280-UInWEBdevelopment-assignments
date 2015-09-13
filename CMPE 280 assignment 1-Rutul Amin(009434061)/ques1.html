@@ -1,0 +1,278 @@
+<!doctype html>
+  <html>
+  <head>
+  <meta charset="UTF-8">
+
+  <title>Quantitative 1</title>
+  <script type="text/javascript">
+  function handleSubmit()
+  {
+  	
+  	var answer=0;
+  	var radios = document.getElementsByName('line');
+	var value;
+	var flag=0;
+	var temp;
+	for (var i = 0; i < radios.length; i++) {
+    	if (radios[i].type === 'radio' && radios[i].checked) {
+        flag=1;
+        //value = radios[i].value; 
+        temp=Number(i)+1;  
+       // alert(temp);
+        value = document.getElementById("hid"+temp).value;  
+        //alert(value);  
+    }
+}
+
+
+if(value === "true")
+	answer=1;
+
+ 	window.location.href = "Trigo.html?"+"q="+answer+"/"+flag;
+ 	
+  }
+
+  </script>
+
+<style>
+canvas {
+    float: right;
+    margin-right: 300px;
+    margin-bottom: 50px;
+    border: 5px;
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+body {
+	float: right;
+	margin-right: 100px;
+    border: 5px solid #a1a1a1;
+    padding: 10px 40px 40px 10px; 
+    width: 1000px;
+    border-radius: 25px;
+}
+</style>
+
+  </head>
+  <body>
+
+  	<div id="d2">
+  		<form id="f2" name="f2" action="/Trigo.html">
+  			 
+  				<fieldset>
+  					<h3>Question 1</h3>
+                <p>Given points (x1,y1) and (x2,y2) find the equation to find the formula for the given line.</p>
+            </br>
+			</br>
+			<section>
+                        
+
+				<div>
+
+					<canvas id="myCanvas" width="300" height="200"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas></aside>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(10,190);
+ctx.lineTo(300,190);
+ctx.stroke();
+</script>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(10,190);
+ctx.lineTo(10,0);
+ctx.stroke(); 
+</script>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(10,190);
+ctx.lineTo(300,0);
+ctx.stroke();
+ctx.fillRect(100,128,5,5);
+ctx.fillRect(190,69,5,5);
+</script>
+
+<script>
+  var canvas = document.getElementById("myCanvas");
+  var context = canvas.getContext("2d");
+  context.fillStyle = "blue";
+  context.font = "10px Arial";
+  context.fillText("(x1,y1)", 80, 120);
+</script>
+
+<script>
+  var canvas = document.getElementById("myCanvas");
+  var context = canvas.getContext("2d");
+  context.fillStyle = "blue";
+  context.font = "10px Arial";
+  context.fillText("(x2,y2)", 170, 60);
+</script>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(300,00);
+ctx.lineTo(280,3);
+ctx.stroke();
+</script>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(300,00);
+ctx.lineTo(290,20);
+ctx.stroke();
+</script>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(300,190);
+ctx.lineTo(290,180);
+ctx.stroke();
+</script>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(300,190);
+ctx.lineTo(290,200);
+ctx.stroke();
+</script>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(10,0);
+ctx.lineTo(17,12);
+ctx.stroke();
+</script>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(10,0);
+ctx.lineTo(3,12);
+ctx.stroke();
+</script>
+
+				</div>
+			</section>
+         <input type="radio" name="line" value="option1" id="rad1"><data name="answer" value = "false" id="hid1" />
+         <mi>y</mi> <mo>=</mi>
+                        <mi>m</mi> <mi>x</mi> <mo>+</mo> <mi>b</mi> </input>
+                        l= &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="line" value="option2" id="rad2">
+                        <data name="answer" value = "false" id="hid2" />
+							<math>
+		
+								<msup>
+								<mfenced>
+									
+							
+							
+									<mrow>
+										<mi>x</mi>
+										<mo>-</mo>
+										<mi>h</mi>
+									</mrow>	
+							
+							  		
+								</mfenced>
+								<mn>2</mn>		
+								</msup>
+									<mo>+</mo>					
+								<msup>
+								<mfenced>
+									
+							
+							
+									<mrow>
+										<mi>y</mi>
+										<mo>-</mo>
+										<mi>k</mi>
+									</mrow>	
+							
+							  		
+								</mfenced>
+								<mn>2</mn>		
+								</msup>
+
+								<mo>=</mo>
+								<msup>
+									<mi>r</mi>
+									<mn>2</mn>
+								</msup>
+							</math>
+						
+					</input>
+                        <br />
+                        <br />
+                        <input type="radio" name="line" value="option3" id="rad3"/>
+                        <data name="answer" value = "true" id="hid3" />
+                       <math>
+                       	<mrow>
+                        	<mi>y</mi>
+                        	<mo>-</mo>
+                        	<mi>y1</mi>
+                        	<mo>=</mo>
+                        	<mi>m</mi>
+                        	<mfenced>
+                        		<mrow>
+                        		<mi>x</mi>
+                        		<mo>-</mo>
+                        		<mi>x1</mi>
+                        	</mrow>
+
+                        	</mfenced>
+						
+                        
+
+                        </mrow>
+                    	</math>
+                    </input>
+                        <input type="radio" name="line" value="option4" id="rad4" >
+						<data name="answer" value = "false" id="hid4" />		
+								<math>
+									<mrow>
+									
+											<mi>y</mi>
+											<mo>-</mo>
+											<mi>y2</mi>
+											<mo>=</mo>
+											<mfrac>
+												<mrow>
+												<mi>x</mi>
+												<mo>-</mo>
+												<mi>x1</mi>
+												</mrow>
+												<mrow>
+													<mi>y</mi>
+													<mo>-</mo>
+													<mi>y1</mi>
+												</mrow>
+											</mfrac>
+											<mi>x</mi>
+											<mo>-</mo>
+											<mi>x2</mi>
+									</mrow>
+								</math>	
+							
+	                    </input>
+	                </br>
+	            </br>
+                        <input type="button" value="Submit" onclick="handleSubmit()"/>
+                        <input type="reset" value="Reset">
+        		</fieldset>
+        		
+		</div>
+	</form>
+	</body>
+</html>

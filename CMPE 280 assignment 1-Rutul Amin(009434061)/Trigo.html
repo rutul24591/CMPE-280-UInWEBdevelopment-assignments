@@ -1,0 +1,208 @@
+<!doctype html>
+  <html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Cosine Page</title>
+  <style type="text/css">
+  body {
+      float: right;
+      margin-right: 100px;
+      border: 5px solid #a1a1a1;
+      padding: 10px 40px; 
+      width: 1000px;
+      border-radius: 25px;
+    }
+</style>
+<script type="text/javascript">
+  function handleSubmit()
+  {
+    
+ var answer = window.location.search.substring(1).split("=");
+ //alert(answer[1]);
+ answer = answer[1].split("/");
+ var radios = document.getElementsByName('line');
+  var value;
+  var flag=0;
+  for (var i = 0; i < radios.length; i++) {
+      if (radios[i].type === 'radio' && radios[i].checked) {
+        flag=1;
+        value = document.getElementById("hid"+i).value;         
+    }
+}
+if(value === "true")
+  answer[0]=Number(answer[0])+1;
+
+answer[1]=Number(answer[1]) + Number(flag);
+  window.location.href = "englishsco.html?"+"q="+answer[0]+"/"+answer[1];
+//document.getElementById('f2').action = "/video.html"; 
+    //document.getElementById('f2').submit();
+  }
+
+  </script>
+
+  </head>
+  <body>
+
+    <div id="d2">
+      <form id="f2" name="f2" action="/englishsco.html">
+        <math xmlns="http://www.w3.org/1998/Math/MathML" mode="">
+          <fieldset>
+            <h3>Question 2</h3>
+                <legend>Select the cosine theorem formula.</legend>
+            </br>
+      </br>
+      <input type="radio" name="line" value="option1">
+      <data name="answer" value = "true" id="hid0" />
+      <math>
+        <mi>cos</mi>
+        <mfenced>
+          <mrow>
+            <mi>&alpha;</mi>
+              <mo>&#xB1;</mo>
+            <mi>&beta;</mi>
+          </mrow>
+        </mfenced>
+        <mo>=</mo>
+        <mi>cos</mi>
+        <mo>&alpha;</mo>
+        <mi>cos</mi>
+        <mo>&beta;</mo>
+        <mo>&#x2213;</mo>
+        <mi>sin</mi>
+        <mo>&alpha;</mo>
+        <mi>sin</mi>
+        <mo>&beta;</mo>
+
+      </math>
+    </input>
+  &nbsp;
+    <input type="radio" name="line" value="option2">
+    <data name="answer" value = "true" id="hid1" />
+    <math>
+      <mi>sin</mi>
+      <mfenced>
+        <mrow>
+      <mo>&alpha;</mo>
+      <mo>&#xB1;</mo>
+      <mo>&beta;</mo>
+        </mrow>
+    </mfenced>
+    <mo>=</mo>
+    <mi>sin</mi>
+    <mo>&alpha;</mo>
+    <mi>cos</mi>
+    <mo>&beta;</mo>
+    <mo>&#xB1;</mo>
+    <mi>cos</mi>
+    <mo>&alpha;</mo>
+    <mi>sin</mi>
+    <mo>&beta;</mi>
+
+
+  </math>
+    </input>
+</div>
+<div>
+</br>
+
+<input type="radio" name="line" value="option3">
+<data name="answer" value = "false" id="hid2" />
+  <math>
+    <mi>sin</mi>
+    <mo>&alpha;</mo>
+    <mo>+</mo>
+    <mi>sin</mi>
+    <mo>&beta;</mo>
+
+    <mo>=</mo>
+    <mi>2</mi>
+    <mi>sin</mi>
+    <mfenced>
+      <mrow>
+        <mfrac>
+        <mrow>
+        <mo>&alpha;</mo>
+        <mo>+</mo>
+        <mo>&beta;</mo>
+        </mrow>
+        <mrow>
+        <mi>2</mi>
+        </mrow>       
+      </mfrac>
+    </mrow>
+  </mfenced>
+
+  <mi>cos</mi>
+    <mfenced>
+      <mrow>
+        <mfrac>
+        <mrow>
+        <mo>&alpha;</mo>
+        <mo>-</mo>
+        <mo>&beta;</mo>
+        </mrow>
+        <mrow>
+        <mi>2</mi>
+        </mrow>       
+      </mfrac>
+    </mrow>
+  </mfenced>
+  </math>
+</input>
+&nbsp;
+<input type="radio" name="line" value="option4">
+<data name="answer" value = "false" id="hid3" />
+  <math>
+    <mi>sin</mi>
+    <mo>&alpha;</mo>
+    <mo>-</mo>
+    <mi>sin</mi>
+    <mo>&beta;</mo>
+
+    <mo>=</mo>
+    <mi>2</mi>
+    <mi>cos</mi>
+    <mfenced>
+      <mrow>
+        <mfrac>
+        <mrow>
+        <mo>&alpha;</mo>
+        <mo>+</mo>
+        <mo>&beta;</mo>
+        </mrow>
+        <mrow>
+        <mi>2</mi>
+        </mrow>       
+      </mfrac>
+    </mrow>
+  </mfenced>
+
+  <mi>sin</mi>
+    <mfenced>
+      <mrow>
+        <mfrac>
+        <mrow>
+        <mo>&alpha;</mo>
+        <mo>-</mo>
+        <mo>&beta;</mo>
+        </mrow>
+        <mrow>
+        <mi>2</mi>
+        </mrow>       
+      </mfrac>
+    </mrow>
+  </mfenced>
+  </math>
+</input>
+
+  </br>
+</br>
+    <input type="button" value="Submit & New Question" onClick="handleSubmit()"/>
+    <input type="reset" value="Cancel & Clear Selection" />
+</fieldset>
+    </div>
+  </form>
+  </body>
+</html>
+
+            
