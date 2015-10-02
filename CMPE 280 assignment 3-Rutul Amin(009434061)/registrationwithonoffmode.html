@@ -1,0 +1,68 @@
+<html>
+<head>
+<script type="text/javascript">
+	function checkURL()
+		{
+			alert(document.URL);
+		}
+	function checkOnline(){
+		document.getElementById("displayConnection").innerHTML = "<br>"+"<br>"+"<b>"+" You are again connected to internet" +"<br>";
+	}	
+	function checkOffline(){
+		document.getElementById("displayConnection").innerHTML = "<br>"+"<br>"+"<b>"+"Your are disconneted from the internet"+"<br>";
+	}
+	if(window.addEventListener){
+		window.addEventListener("online",checkOnline);
+		window.addEventListener("offline",checkOffline);
+	}
+</script>
+<script src="js/modernizr.js"></script>
+<title>Registration with on/offline mode</title>
+</head>
+<body onload="checkURL()">
+	<form name="regForm" id="regForm">
+		<header>
+			<h1 align="center" style="background-color:#b0c4de; margin-left:405px; margin-right:405px">Registration Form</h1>
+		</header>
+		<table align="center" style="border-top: 1px solid black;border-bottom:1px solid black;border-left:1px solid black;border-right:1px solid black; padding:5px width:600px">
+			<tr>
+				<td></td>
+				<td>FirstName:</td>
+				<td><input type="text" name="FirstName" id="firstName" placeholder="Enter First Name"></td>
+			</tr>	
+			<tr>
+				<td></td>
+				<td>LastName:</td>
+				<td><input type="text" name="LastName" id="lastName" placeholder="Enter Last Name"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Password:</td>
+				<td><input type="password" name="Password" id="password" placeholder="Enter Your Password"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Confirm Password:</td>
+				<td><input type="password" name="ConfirmPassword" id="confirmPassword" placeholder="Enter Your Password again"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Email:</td>
+				<td><input type="text" name="Email" id="email" placeholder="Enter your Email address"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>D.O.B:</td>
+				<td><input type="datetime" name="dobTime" id="dobTime"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="button" value="submit"></td>
+			</tr>
+			<tr align="center">
+				<td colspan = "3"><b>Try to Turn off your internet connection and see the magic below</b></td>
+			</tr>
+		</table>
+		<div id="displayConnection" align="center"></div>	
+	</form>
+</body>
+</html>
